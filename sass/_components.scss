@@ -29,3 +29,141 @@
         }
     }
 }
+
+.content {
+    &__collection {
+        padding: 5rem 15rem 12rem;
+        display: flex;
+        justify-content: space-around;
+        filter: drop-shadow(0px 3px 8px rgba(black, 0.36));
+
+        &__cars {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto;
+            width: 35rem;
+            clip-path: polygon(0 0, 100% 0, 67% 100%, 0% 100%);
+            border-radius: 15px 15px 15px 15px;
+            background-image: linear-gradient(to top, white, white);
+
+            &--name {
+                display: flex;
+                justify-content: space-between;
+                font-size: 2rem;
+                padding: 1rem 2rem 0 1.2rem;
+            }
+
+            &--image {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                transform: translateX(80px);
+            }
+
+            &--description {
+                display: flex;
+                justify-content: space-between;
+                align-content: space-between;
+                font-size: 2rem;
+                padding: 0 12rem 0.8rem 1.2rem;
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        
+        &--leftside {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-right: 5rem;
+            padding-bottom: 3rem;
+            
+            &--image {
+                display: flex;
+                align-content: center;
+                img {
+                    width: 33rem;
+                    height: fit-content;
+                }
+            }
+
+            &--text {
+                p {
+                    font-size: 2.5rem;
+                    line-height: 3.5rem;
+                    width: 60rem;
+                    padding-bottom: 2rem;
+                }
+
+                button {
+                    width: 100%;
+                    background-color: var(--color-red);
+                    border: none;
+                    border-radius: 10px;
+                    padding-top: 1.2rem;
+                    padding-bottom: 1.2rem;
+                    cursor: pointer;
+
+                    a {
+                        font-size: 3rem;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: var(--color-gray-light);
+                    }
+                }
+            }
+        }
+
+        &--rightside {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            border-left: 2px solid var(--color-blue-dark);
+
+            &--title {
+                display: flex;
+                justify-content: space-evenly;
+                font-size: 3rem;
+                font-weight: 600;
+                text-transform: capitalize;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+
+            &--post {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 3rem;
+                border-top: 1px solid var(--color-blue-dark);
+
+                &--title {
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+
+                &--main {
+                    flex-grow: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    p {
+                        font-size: 2rem;
+                        line-height: 3rem;
+                    }
+
+                    img {
+                        width: 30rem;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

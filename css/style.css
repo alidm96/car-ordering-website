@@ -46,6 +46,105 @@ body {
     border-radius: 100%;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.39); }
 
+.content__collection {
+  padding: 5rem 15rem 12rem;
+  display: flex;
+  justify-content: space-around;
+  filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.36)); }
+  .content__collection__cars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 35rem;
+    clip-path: polygon(0 0, 100% 0, 67% 100%, 0% 100%);
+    border-radius: 15px 15px 15px 15px;
+    background-image: linear-gradient(to top, white, white); }
+    .content__collection__cars--name {
+      display: flex;
+      justify-content: space-between;
+      font-size: 2rem;
+      padding: 1rem 2rem 0 1.2rem; }
+    .content__collection__cars--image {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      transform: translateX(80px); }
+    .content__collection__cars--description {
+      display: flex;
+      justify-content: space-between;
+      align-content: space-between;
+      font-size: 2rem;
+      padding: 0 12rem 0.8rem 1.2rem; }
+
+.content__main {
+  display: flex;
+  justify-content: center; }
+  .content__main--leftside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5rem;
+    padding-bottom: 3rem; }
+    .content__main--leftside--image {
+      display: flex;
+      align-content: center; }
+      .content__main--leftside--image img {
+        width: 33rem;
+        height: fit-content; }
+    .content__main--leftside--text p {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      width: 60rem;
+      padding-bottom: 2rem; }
+    .content__main--leftside--text button {
+      width: 100%;
+      background-color: var(--color-red);
+      border: none;
+      border-radius: 10px;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      cursor: pointer; }
+      .content__main--leftside--text button a {
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--color-gray-light); }
+  .content__main--rightside {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--color-blue-dark); }
+    .content__main--rightside--title {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 3rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding-top: 4rem;
+      padding-bottom: 4rem; }
+    .content__main--rightside--post {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem;
+      border-top: 1px solid var(--color-blue-dark); }
+      .content__main--rightside--post--title {
+        font-size: 2.5rem;
+        font-weight: 600; }
+      .content__main--rightside--post--main {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end; }
+        .content__main--rightside--post--main p {
+          font-size: 2rem;
+          line-height: 3rem; }
+        .content__main--rightside--post--main img {
+          width: 30rem;
+          height: auto; }
+
 .header {
   display: flex;
   text-transform: capitalize;
