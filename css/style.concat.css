@@ -1,3 +1,434 @@
+/* media queries */
+/*
+    breakpoints for devices
+
+    0 - 600px        ---->    Mobile
+    600px - 900ox    ---->    Tablets
+    900px - 1200px   ---->    Desktop
+    1200px +         ---->    Biger screens + infinite
+
+
+*/
+:root {
+  --color-red:       #f05454;
+  --color-blue:      #30475e;
+  --color-blue-dark: #222831;
+  --color-gray-light:#e8e8e8;
+  --color-gray-dark: #707070; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 37.55em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6rem;
+  padding: 3rem;
+  color: var(--color-blue); }
+  @media only screen and (min-width: 112.5em) {
+    body {
+      padding: 5rem; } }
+  @media only screen and (max-width: 75em) {
+    body {
+      padding: 2rem; } }
+  @media only screen and (max-width: 37.55em) {
+    body {
+      padding: 1.5rem; } }
+
+.header__title {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--color-gray-dark); }
+
+.header__navigation {
+  display: flex;
+  align-items: center; }
+  .header__navigation__navlink li {
+    list-style: none; }
+  .header__navigation__navlink li a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--color-gray-dark);
+    padding-right: 3rem; }
+  .header__navigation__profile {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.39); }
+
+@media only screen and (min-width: 112.5em) {
+  .header__title {
+    font-size: 7rem; }
+  .header__navigation__navlink li a {
+    font-size: 4rem; }
+  .header__navigation__profile {
+    height: 20rem;
+    width: 20rem; } }
+
+@media only screen and (max-width: 75em) {
+  .header__title {
+    font-size: 2.5rem; }
+  .header__navigation__navlink li a {
+    font-size: 1.5rem;
+    padding-right: 1.5rem; }
+  .header__navigation__profile {
+    height: 8rem;
+    width: 8rem; } }
+
+@media only screen and (max-width: 37.55em) {
+  .header__title {
+    font-size: 1.3rem; }
+  .header__navigation__navlink li a {
+    font-size: 1.2rem;
+    padding-right: 1rem; }
+  .header__navigation__profile {
+    height: 5rem;
+    width: 5rem; } }
+
+@media only screen and (max-width: 20em) {
+  .header__title {
+    font-size: 1.2rem; }
+  .header__navigation__navlink li a {
+    font-size: 0.8rem;
+    padding-right: 0.8rem; }
+  .header__navigation__profile {
+    height: 5rem;
+    width: 5rem; } }
+
+.content__collection {
+  display: flex;
+  justify-content: space-evenly;
+  filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.36));
+  padding: 10rem 7rem 0; }
+  .content__collection__cars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35rem;
+    clip-path: polygon(0 0, 100% 0, 67% 100%, 0% 100%);
+    border-radius: 15px 15px 15px 15px;
+    background-image: linear-gradient(to top, white, white); }
+    .content__collection__cars--name {
+      display: flex;
+      justify-content: space-between;
+      font-size: 2rem;
+      padding: 1.5rem 2rem 0.5rem 1rem; }
+    .content__collection__cars--image {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      transform: translateX(80px); }
+    .content__collection__cars--description {
+      display: flex;
+      justify-content: space-between;
+      font-size: 2rem;
+      padding: 0.5rem 12rem 1rem 1rem; }
+  @media only screen and (min-width: 112.5em) {
+    .content__collection {
+      padding: 15rem 15rem 0; }
+      .content__collection__cars {
+        width: 60rem; }
+        .content__collection__cars--name {
+          font-size: 3.5rem;
+          padding: 2rem 4rem 1rem 2rem; }
+        .content__collection__cars--image {
+          transform: translateX(90px); }
+        .content__collection__cars--description {
+          font-size: 3.5rem;
+          padding: 1rem 20rem 2rem 2rem; } }
+  @media only screen and (max-width: 75em) {
+    .content__collection {
+      padding: 8rem 6rem 0; }
+      .content__collection__cars {
+        width: 25rem; }
+        .content__collection__cars--name {
+          font-size: 1.5rem;
+          padding: 1rem 1.5rem 0.5rem 1rem; }
+        .content__collection__cars--image {
+          transform: translateX(50px); }
+        .content__collection__cars--description {
+          font-size: 1.5rem;
+          padding: 1rem 8rem 0.5rem 1rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .content__collection {
+      padding: 5rem 5rem 0; }
+      .content__collection__cars {
+        width: 20rem; }
+        .content__collection__cars--name {
+          font-size: 1rem;
+          padding: 1rem 1.5rem 0.5rem 1rem; }
+        .content__collection__cars--image {
+          transform: translateX(30px); }
+        .content__collection__cars--description {
+          font-size: 1rem;
+          padding: 0.5rem 7rem 0.5rem 1rem; } }
+  @media only screen and (max-width: 37.55em) {
+    .content__collection {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5rem 0 0;
+      height: 65rem; }
+      .content__collection__cars {
+        width: 25rem; }
+        .content__collection__cars--name {
+          font-size: 1.5rem;
+          padding: 1rem 2rem 0.5rem 1rem; }
+        .content__collection__cars--image {
+          transform: translateX(50px); }
+        .content__collection__cars--description {
+          font-size: 1.5rem;
+          padding: 0.5rem 8rem 0.5rem 1rem; } }
+  @media only screen and (max-width: 20em) {
+    .content__collection {
+      height: 55rem; }
+      .content__collection__cars {
+        width: 20rem; }
+        .content__collection__cars--name {
+          font-size: 1rem;
+          padding: 1rem 2rem 0.5rem 1rem; }
+        .content__collection__cars--image {
+          transform: translateX(40px); }
+        .content__collection__cars--description {
+          font-size: 1rem;
+          padding: 0.5rem 7rem 0.2rem 1rem; } }
+
+.content__main {
+  display: flex;
+  margin-top: 15rem; }
+  .content__main--leftside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5rem; }
+    .content__main--leftside--image {
+      display: flex;
+      justify-content: space-between; }
+      .content__main--leftside--image img {
+        width: 45%; }
+    .content__main--leftside--text p {
+      font-size: 2.8rem;
+      line-height: 3.5rem;
+      width: 90%;
+      padding-bottom: 2.5rem; }
+    .content__main--leftside--text button {
+      width: 100%;
+      border: none;
+      border-radius: 1rem;
+      background-color: var(--color-red);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem; }
+      .content__main--leftside--text button a {
+        font-size: 4rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--color-gray-light); }
+  .content__main--rightside {
+    border-left: 2px solid var(--color-blue-dark);
+    padding-top: 3rem;
+    padding-bottom: 2rem; }
+    .content__main--rightside--title {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 4rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding-bottom: 3rem; }
+    .content__main--rightside--post {
+      border-top: 1px solid var(--color-blue-dark);
+      padding: 3rem 0 2rem 5rem; }
+      .content__main--rightside--post--title {
+        font-size: 3rem;
+        font-weight: 600;
+        text-transform: capitalize; }
+      .content__main--rightside--post--main {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 5rem; }
+        .content__main--rightside--post--main p {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          width: 70%; }
+        .content__main--rightside--post--main img {
+          width: 30%; }
+  @media only screen and (min-width: 112.5em) {
+    .content__main {
+      margin-top: 20rem; }
+      .content__main--leftside {
+        padding-right: 8rem; }
+        .content__main--leftside--image img {
+          width: 45%; }
+        .content__main--leftside--text p {
+          font-size: 4rem;
+          line-height: 5.5rem;
+          padding-bottom: 4rem; }
+        .content__main--leftside--text button {
+          padding-top: 1rem;
+          padding-bottom: 1rem; }
+          .content__main--leftside--text button a {
+            font-size: 6rem; }
+      .content__main--rightside {
+        padding-top: 5rem; }
+        .content__main--rightside--title {
+          font-size: 5rem;
+          padding-bottom: 5rem; }
+        .content__main--rightside--post {
+          padding: 4rem 0 3rem 8rem; }
+          .content__main--rightside--post--title {
+            font-size: 4rem; }
+          .content__main--rightside--post--main {
+            padding-top: 6rem; }
+            .content__main--rightside--post--main p {
+              font-size: 3.5rem;
+              line-height: 5rem;
+              width: 70%; } }
+  @media only screen and (max-width: 75em) {
+    .content__main {
+      margin-top: 10rem; }
+      .content__main--leftside {
+        flex-shrink: 1.25;
+        padding-right: 3rem; }
+        .content__main--leftside--text p {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          width: 90%;
+          padding-bottom: 2.5rem; }
+        .content__main--leftside--text button {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem; }
+          .content__main--leftside--text button a {
+            font-size: 3rem; }
+      .content__main--rightside {
+        padding-top: 2rem;
+        padding-bottom: 1rem; }
+        .content__main--rightside--title {
+          font-size: 2.5rem;
+          padding-bottom: 2rem; }
+        .content__main--rightside--post {
+          padding: 2rem 0 1rem 3rem; }
+          .content__main--rightside--post--title {
+            font-size: 2rem; }
+          .content__main--rightside--post--main {
+            padding-top: 3rem; }
+            .content__main--rightside--post--main p {
+              font-size: 1.2rem;
+              line-height: 2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .content__main {
+      margin-top: 8rem; }
+      .content__main--leftside {
+        flex-shrink: 1.25;
+        padding-right: 2rem; }
+        .content__main--leftside--text p {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          padding-bottom: 2rem; }
+        .content__main--leftside--text button a {
+          font-size: 2.5rem; }
+      .content__main--rightside {
+        padding-top: 2rem;
+        padding-bottom: 1rem; }
+        .content__main--rightside--title {
+          font-size: 2rem;
+          padding-bottom: 1.5rem; }
+        .content__main--rightside--post {
+          padding: 3rem 0 2rem 2rem; }
+          .content__main--rightside--post--title {
+            font-size: 2rem; }
+          .content__main--rightside--post--main {
+            padding-top: 3rem; }
+            .content__main--rightside--post--main p {
+              font-size: 1.5rem;
+              line-height: 2rem; } }
+  @media only screen and (max-width: 37.55em) {
+    .content__main {
+      display: block; }
+      .content__main--leftside {
+        padding-right: 0; }
+        .content__main--leftside--image {
+          display: flex;
+          justify-content: space-evenly; }
+          .content__main--leftside--image img {
+            width: 40%; }
+        .content__main--leftside--text {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .content__main--leftside--text p {
+            font-size: 2rem;
+            line-height: 3rem;
+            text-align: center;
+            width: 100%;
+            padding-top: 10rem;
+            padding-bottom: 3rem; }
+          .content__main--leftside--text button {
+            width: 70%;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem; }
+            .content__main--leftside--text button a {
+              font-size: 3rem; }
+      .content__main--rightside {
+        border-left: none;
+        padding-top: 10rem;
+        padding-bottom: 2rem; }
+        .content__main--rightside--title {
+          font-size: 2rem;
+          padding-bottom: 3rem; }
+        .content__main--rightside--post {
+          padding-top: 3rem; }
+          .content__main--rightside--post--title {
+            font-size: 3rem; }
+          .content__main--rightside--post--main p {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            width: 60%; }
+          .content__main--rightside--post--main img {
+            width: 40%; } }
+  @media only screen and (max-width: 20em) {
+    .content__main--leftside--text p {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      padding-top: 5rem;
+      padding-bottom: 1.5rem; }
+    .content__main--leftside--text button {
+      width: 80%; }
+      .content__main--leftside--text button a {
+        font-size: 2.5rem; }
+    .content__main--rightside {
+      padding-top: 8rem; }
+      .content__main--rightside--title {
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem; }
+      .content__main--rightside--post {
+        padding-top: 2rem; }
+        .content__main--rightside--post--title {
+          font-size: 2rem; }
+        .content__main--rightside--post--main p {
+          font-size: 1rem;
+          line-height: 1.5rem; } }
+
+.header {
+  display: flex;
+  text-transform: capitalize;
+  justify-content: space-between;
+  align-items: center; }
 
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
